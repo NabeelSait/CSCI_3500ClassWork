@@ -1,0 +1,25 @@
+1) Cemil Can Ali Marandi & Nabeel Sait
+
+2) It copies or duplicates the previous line as the output and moves on to the next line until CTRL+D is pressed.
+
+3) The text file which was redirected to cat was printed immediately after typing cat < mars.txt on the terminal.
+
+4) It writes to the the new created file and after CTRL+D it stops writing into the file.
+
+5) 
+
+6) unistd.h
+	
+7) 
+
+8) "On success, the number of bytes read is returned." 
+This is from the documentation (man 2 read). Therefore an integer is the return type.
+Zero indicates the end of a file.
+
+9) Yes the programs behavior does match but it does matter what buffersize is used.
+
+10) The bufferSize does affect the correctness of the program. 
+When bufferSize was equal to 1 the whole text was outputted but
+anything more than 1 meant that the program would go back and output additional already seen texts.
+
+11) when bufferSize was set to 0 there was no output at all. 
