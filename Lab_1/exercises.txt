@@ -1,4 +1,4 @@
-1. Nabeel Sait and Cecil Can Ali Marandi
+1. Nabeel Sait and Cemil Can Ali Marandi
 
 2. The compression technique works well when a file has many repeating patterns, and works poorly otherwise.
 It likely works better in a binary context than with plaintext. 

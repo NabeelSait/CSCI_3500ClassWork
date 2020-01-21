@@ -1,4 +1,4 @@
-// Nabeel Sait and Cecil Can Ali Marandi
+// Nabeel Sait and Cemil Can Ali Marandi
 // 1/15/2020
 // This code can perform a run-length encryption on a file in order to compress it and can decompress
 // a compressed file
