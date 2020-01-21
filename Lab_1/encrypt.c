@@ -1,6 +1,8 @@
 // Nabeel Sait and Cecil Can Ali Marandi
 // 1/15/2020
-// Run-length encoding
+// This code can perform a run-length encryption on a file in order to compress it and can decompress
+// a compressed file
+// Based on faintly confusing wording in the assignment, this is meant to be compiled as gcc -o rle encrypt.c
 
 #include <unistd.h>
 #include <sys/types.h>
@@ -12,7 +14,7 @@
 
 int main(int argc, char* argv[]) {
 
-
+   //Error Checking and taking command line arguments
    if (argc != 5)
    {
       char usage[] = "usage: ./rle <input_file> <output_file> <compression length> <mode>";
@@ -26,6 +28,7 @@ int main(int argc, char* argv[]) {
    int k = strtol(argv[3], NULL, 10);
    int mode = strtol(argv[4], NULL, 10);
 
+   //Error checking 
    if (k < 1)
    {
       fprintf(stdout, "Error: compression length must be greater than 1 \n");
@@ -38,10 +41,10 @@ int main(int argc, char* argv[]) {
       exit(-1);
    }
 
-   int inputFD = open(inputFileName, O_CREAT, S_IRUSR);
+   int inputFD = open(inputFileName, O_RDONLY);
    if (inputFD == -1)
    {
-      perror("open(inputFileName, O_CREAT, S_IRUSR)");
+      perror("open(inputFileName, O_RDONLY)");
       exit(-1);
    }
 
@@ -52,6 +55,7 @@ int main(int argc, char* argv[]) {
       exit(-1);
    }
 
+   //Compression
    if (mode == 0)
    {
       char buffer[k];
@@ -101,6 +105,7 @@ int main(int argc, char* argv[]) {
       write(outputFD, prev, bytes_read);
    }
 
+   //Decompression
    if (mode == 1)
    {
       int num = 0;
@@ -139,6 +144,8 @@ int main(int argc, char* argv[]) {
          check_end = read(inputFD, &num, 1);
       }
    }
+ 
+   //Closing files
    close(inputFD);
    close(outputFD);
 }
