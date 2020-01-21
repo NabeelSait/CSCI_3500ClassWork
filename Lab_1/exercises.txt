@@ -1,0 +1,26 @@
+1. Nabeel Sait and Cecil Can Ali Marandi
+
+2. The compression technique works well when a file has many repeating patterns, and works poorly otherwise.
+It likely works better in a binary context than with plaintext. 
+
+3. The ones with bias will likely compress better, so strong_bias should compress the best.
+
+1mil_random: .625 (yes, this file got larger)
+
+1mil_weak_bias: 1.17
+
+1mil_strong_bias: 2.44
+
+4. The program takes 29.936s to run in real time
+
+5. The program takes 26.936s to run in real time. The read and strncmp operations take place less frequently,
+but with more data for each operation. This is what likely accounts for the slightly lower runtime. 
+
+6. Both extra credit problems were attempted
+
+EC1. The decompressed logo is indeed undistorted. The compression ratio for the photo is 36.97 
+with rle. It has a ratio of 16.66 with a PNG conversion, and 41.27 with a JPEG conversion.
+
+EC2. The compression ratio with rle is 0.517. The compression ratio for the JPEG is 19.85,
+and the PNG has a ratio of 2.023. There are no discernible visual differences between the 
+pictures. 

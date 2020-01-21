@@ -1,0 +1,26 @@
+1. Nabeel Sait and Cecil Can Ali Marandi
+
+2. stdio.h
+
+3. fprintf asks for an output stream
+
+4. printf writes to stdout (aka the terminal) and fprintf writes to the designated output stream.
+
+5. Hello, world!
+
+6. 2
+
+7. unistd.h
+
+8.
+
+9. Hello, world!
+
+10. A bunch of random characters are entered. Since write() takes a memory reference,
+this is likely entering the values assigned to the memory values after the enetered array
+
+11. If you were trying to write a general use C program that would be used with different OS, you 
+would likely want to use the C standard library function. If the program you were writing is intended
+to interact more directly with the OS, you would likely want to use the OS system call. 
+
+
