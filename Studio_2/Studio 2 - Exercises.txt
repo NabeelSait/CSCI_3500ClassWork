@@ -16,10 +16,8 @@
 This is from the documentation (man 2 read). Therefore an integer is the return type.
 Zero indicates the end of a file.
 
-9) Yes the programs behavior does match but it does matter what buffersize is used.
+9) Yes the programs behavior does match.
 
-10) The bufferSize does affect the correctness of the program. 
-When bufferSize was equal to 1 the whole text was outputted but
-anything more than 1 meant that the program would go back and output additional already seen texts.
+10) At a lower buffer size, even a buffer size of one, the program was still accurate.
 
-11) when bufferSize was set to 0 there was no output at all. 
+11) A lower buffer size will cause the program to run slower, but would be less wasteful in terms of memory

@@ -4,13 +4,16 @@
 
 #include <unistd.h>
 #include <stdio.h>
-#define bufferSize 200
+#define bufferSize 1
 
 int main(int argc, char* argv[]){
    char buffer [bufferSize];
 
-   while ((read(STDIN_FILENO, buffer, bufferSize)) > 0) {
-           write(STDOUT_FILENO,  &buffer, bufferSize);
+   while (1) {
+      int bytes_read = read(STDIN_FILENO, buffer, bufferSize);
+      if (bytes_read == 0)
+         break;
+      write(STDOUT_FILENO,  &buffer, bytes_read);
     }
    return 0;
 }
