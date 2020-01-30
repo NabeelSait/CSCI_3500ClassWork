@@ -1,0 +1,28 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2. 
+
+3.
+
+4. 
+
+5. The pointer points to the first character in a string. So, it would point to 'W' for winString.
+
+6. W
+
+7. i
+
+8. 
+
+9. We guess it would print Windows! and then indows! and so on until it just printed !.
+Update: We were right
+
+10. Minix!
+
+11. The program throws a segmentation fault
+
+12. The difference between the numbers is 8, or 2*sizeof(int)
+
+13. The & operator returns the memory reference of an object. Since numbers[2] returns the int
+located at numbers + 2*sizeof(int), we need to use the & operator to get a memory reference
+we can assign to a pointer.  
