@@ -1,0 +1,54 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2. #include <unistd.h>
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
+#define bufferSize 200
+
+int main(int argc, char* argv[]){
+
+   char* inputFileName = argv[1];
+   int inputFD = open(inputFileName, O_RDONLY);
+   char buffer[bufferSize];
+
+   int bytes_read = read(inputFD, buffer, bufferSize);
+   while (bytes_read > 0)
+   {
+      write(STDOUT_FILENO, buffer, bytes_read);
+      bytes_read = read(inputFD, buffer, bufferSize);
+   }
+   return 0;
+}
+
+3. Nothing at all
+
+4. Nothing at all
+
+5. It returns a -1 on an error
+
+6.    if (inputFD == -1)
+   {
+      printf("An error occurred \n");
+      exit(-1);
+   }
+
+7. perror("Error opening file");
+
+8. 
+
+9. It prints the statement: Error opening file: No such file or directory
+
+10. It prints: Error opening file: Permission denied
+
+11. 
+open: returns -1, sets errno
+close: returns -1, sets errno
+read: returns -1, sets errno
+write: returns -1, sets errno
+printf: returns negative value, does not set errno
+
+12. It simplifies error messages by allowing the programmer to let perror() print an appropriate message
+and by having the error tied to a return value, it makes discovering any potential errors easier.     
