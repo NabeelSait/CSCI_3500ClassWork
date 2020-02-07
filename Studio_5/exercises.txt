@@ -1,0 +1,46 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2.
+[saitn@hopper Studio_5]$ ./fork
+26901
+[saitn@hopper Studio_5]$ ./fork
+26908
+[saitn@hopper Studio_5]$ ./fork
+26910
+
+3. Two PID's are outputted
+[saitn@hopper Studio_5]$ ./fork
+27220
+27221
+[saitn@hopper Studio_5]$ ./fork
+27228
+27229
+[saitn@hopper Studio_5]$ ./fork
+27305
+27306
+
+4. The return value in parent is the child's PID, and the return value in the child is 0.
+
+5. 
+Parent PID: 28595
+Child PID: 28596
+
+6. The program seems to stop running after the parent ID is outputted, but then, after 3 seconds,
+it outputs the child ID (though this happens after input is prompted again by the terminal)
+
+7. The program now waits 3 seconds for the child to output, then moves to the parent and outputs
+
+8.  
+total 11
+-rw-r--r--. 1 saitn student  745 Jan 29 09:35 exercises.txt
+-rw-r--r--. 1 saitn student  744 Jan 29 09:27 exercises.txt.save
+-rwxr-xr-x. 1 saitn student 8616 Jan 29 09:39 fork
+-rw-r--r--. 1 saitn student  502 Jan 29 09:37 fork.c
+9.
+Child PID: 35814
+total 12
+-rw-r--r--. 1 saitn student  745 Jan 29 09:35 exercises.txt
+-rw-r--r--. 1 saitn student  744 Jan 29 09:27 exercises.txt.save
+-rwxr-xr-x. 1 saitn student 8616 Jan 29 09:47 fork
+-rw-r--r--. 1 saitn student  598 Jan 29 09:47 fork.c
+Parent PID: 35813
