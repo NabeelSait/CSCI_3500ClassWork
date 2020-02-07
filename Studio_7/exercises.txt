@@ -1,0 +1,50 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+Program 1:
+#include <unistd.h>
+
+int main(int argc, char* argv[]) {
+
+   char buffer[] = "Hello, world!\n";
+   write(STDOUT_FILENO, buffer, 14);
+
+   return 0;
+}
+
+Program 2:
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int main (int argc, char* argv[])
+{
+   int size = 50;
+   char buffer[size];
+
+   while(1)
+   {
+      char *check = fgets(buffer, size, stdin);
+      if (check == NULL)
+         break;
+      printf("Program 2 got: %s\n", buffer);
+   }
+}
+
+2. 
+Hello, world!
+
+3. fd[0] contains the read end, and fd[1] contains the write end
+
+4. newfd is closed if the program succeeds
+
+5. 
+ dup2(pfd[1], STDOUT_FILENO);
+ dup2(pfd[0], STDIN_FILENO);
+
+6. Program 2 got: Hello, world!
+
+7.Program 2 got: Hello, world!
+
+8. One benefit is that a program can be written for general use with a particular filestream
+and then easily used with any filestream, depending on the needs of the user. Another is that programs
+can be written into pipelines to use the results of other programs in place of their filestreams. 
