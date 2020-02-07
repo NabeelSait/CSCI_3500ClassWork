@@ -1,0 +1,45 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2. 
+Enter input: Input
+Input
+
+3. Subsequent calls to strtok() that are meant to parse the same string should have NULL as the 
+string parameter. 
+
+4. A whitespace is probably the best delimiter for regular text
+
+5. 
+Enter input: Hello World!
+Hello
+
+6. 
+Enter input: Hello World World
+Hello
+World
+World
+
+
+7. char* string = strtok(buffer, "\n");
+
+8.
+
+9. char* cmd  = strtok(string, " ");
+
+10.
+   int count = 1;
+
+   while(1)
+   {
+      char* token = strtok(NULL, " ");
+      if((token == NULL) || (count >= max_args))
+         break;
+      my_argv[count] = token;
+   }
+   my_argv[count + 1] = '\0';
+
+11.
+Enter input: ls -l
+total 10
+-rwxr-xr-x. 1 saitn student 8560 Jan 30 12:55 parse
+-rw-r--r--. 1 saitn student  816 Jan 30 12:55 parse.c
