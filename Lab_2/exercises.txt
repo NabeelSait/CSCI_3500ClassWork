@@ -1,0 +1,11 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2. There was a bug sometime in development where two EOF would be necessary to exit. This bug 
+was not replicated since and we are thus unsure if it remains in the final build.
+In addition, sometimes commands like sort ( ps aux do not execute in time, unless, for some reason, 
+one is in gdb. This issue does not seem to exist at the moment, but it did on an earlier, mostly
+identical build.
+The code is set up to catch null commands, however, incorrect syntax normally just causes the command
+to execute as intended, as if the syntax was correct. 
+
+3. The extra credit assignment was completed.   
