@@ -1,0 +1,42 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2. The return type is void* and the argument types are also void*
+
+3. 
+
+4. Hello world
+
+5. 
+struct my_struct {
+   int arg1;
+   char arg2[100];
+   int ret;
+};
+
+6. 
+thread arg1: 5
+thread arg2: Hello World
+thread ret: 0
+
+7. 
+
+8. 
+thread arg1: 0
+thread arg2: This is thread 0
+threat ret: 1
+thread arg1: 1
+thread arg2: This is thread 1
+threat ret: 2
+thread arg1: 3
+thread arg2: This is thread 3
+threat ret: 4
+thread arg1: 2
+thread arg2: This is thread 2
+threat ret: 3
+thread arg1: 4
+thread arg2: This is thread 4
+threat ret: 5
+thread return value is now: 15
+
+9. The threads do not execute in the same order each time. This may be because each thread executes
+simultaneously without waiting for the previous ones to finish.
