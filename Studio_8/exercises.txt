@@ -1,0 +1,39 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2. 
+Sleeper's PID is: 27499
+Slept for 0 iterations!
+Slept for 1 iterations!
+Slept for 2 iterations!
+Slept for 3 iterations!
+
+3. SIGINT has a value of 2, and the comment is "Interrupt from keyboard"
+
+4. The sleeper process is killed
+
+5. We chose 4, SIGILL, comment: "Illegal Instruction"
+The output at the end was: Illegal instruction (core dumped)
+
+6. Both programs terminate, and no success method is printed
+
+7. 
+void ignoreSignal( int signum )
+{
+   printf("SIGINT is being ignored\n");
+}
+
+int main( int argc, char* argv[] ){
+
+        signal(2, ignoreSignal);
+
+8. 
+Forking sleeper...
+Waiting for sleeper 32616...
+Sleeper's PID is: 32616
+Slept for 0 iterations!
+Slept for 1 iterations!
+^CSIGINT is being ignored
+Parent finished waiting and returned successfully!
+
+9. Signal handling is important if a dangerous error or potential vulnerability is encountered, 
+because a system can then tell any vulnerable processes to shut down 
