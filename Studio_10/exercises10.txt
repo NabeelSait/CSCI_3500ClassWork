@@ -1,0 +1,59 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2. void* adder()
+{
+    int i;
+    for (i = 0; i < 2000000; i++)
+    {
+        race++;
+    }  
+
+    return 0;
+}
+
+void* subtractor()
+{
+    int i;
+    for (i = 0; i < 2000000; i++)
+    {
+        race--;
+    }  
+
+3. If we just run these functions in main, I expect race to be incremented up to 2 million, then back down to 0.
+After running the program, we were correct.
+
+4. If run by seperate threads, there is a possibility of the computations happening without any error, resulting in 0. 
+Or, since the functions are loading and storing race simultaneously, there could be incorrect in-between values created (i.e. anywhere from -2 million to 2 million)
+
+5. The value is not zero, and in reality is somewhere in between -2 million and 2 million.
+[alimarandic@hopper ~]$ ./studio10 
+1547587
+[alimarandic@hopper ~]$ ./studio10 
+-1542522
+[alimarandic@hopper ~]$ ./studio10 
+366346
+[alimarandic@hopper ~]$ ./studio10 
+1641951
+[alimarandic@hopper ~]$ ./studio10 
+-1261080
+[alimarandic@hopper ~]$ ./studio10 
+1551540
+[alimarandic@hopper ~]$ ./studio10 
+1820323
+[alimarandic@hopper ~]$ ./studio10 
+-1202195
+
+6. This program is essentially having an issue where both threads attempt to store their incremented/decremented value of race back into its location in memory, 
+and only one succeeds. The max, then, would be 2million, and the min would be -2million
+
+7. Yes, the program is still having the same problem. However, when changing the iterations to 1000, the problem stopped.
+
+8. Yes, because even with 1 processor, each thread has multiple steps for loading and storing the value. 
+There is no guarantee that 1 thread will get to do both loading and storing before another thread (sequentially).
+
+9. The problem stopped.
+
+10. The problem restarted.
+
+11. Since the # of iterations is much larger, the processor has to go back and forth between the 2 threads, instead of doing them sequentially. 
+The processor will finish the execution of a thread before starting another if the # of iterations is small, making for a smaller/quicker task.
