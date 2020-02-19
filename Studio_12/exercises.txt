@@ -1,0 +1,45 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2. The function signature is type __sync_add_and_fetch (type *ptr, type value), and the function
+is to add value to the object pointed to by ptr. It returns the new value.
+
+3. 
+Before addition: 10
+After addition: 15 
+
+4.
+0
+
+5. 
+[saitn@hopper Studio_12]$ time ./Studio12
+0
+
+real    0m0.955s
+user    0m1.851s
+sys     0m0.001s
+[saitn@hopper Studio_12]$ time ./Studio12
+0
+
+real    0m0.783s
+user    0m1.477s
+sys     0m0.005s
+[saitn@hopper Studio_12]$ time ./Studio12
+0
+
+real    0m0.776s
+user    0m1.476s
+sys     0m0.002s
+
+The average real time for the program is 0.838 s
+
+6. The average real time for Studio 11's program is (based on redone measurements) is
+.183 s. 
+
+7. The mutex locking strategy is roughly 4.6 times faster than atomic instructions
+
+8. The average real time for Studio 10's racy program is .235 s, based on new measurements
+
+So, the atomic instructions are about 1.28 times faster
+
+9. Mutex locking is likely prefereable for speed. However, if you have more threads
+that need to be run simlutaneously, atomic instructions may be better 
