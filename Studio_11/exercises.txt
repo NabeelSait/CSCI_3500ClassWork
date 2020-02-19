@@ -1,0 +1,96 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2. 
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+
+3.
+
+4. If we synchronize access, our numeric value should be 0, and the program should take more time to run
+
+5. The output matches expectations
+[saitn@hopper Studio_11]$ ./Studio11
+0
+[saitn@hopper Studio_11]$ ./Studio11
+0
+[saitn@hopper Studio_11]$ ./Studio11
+0
+[saitn@hopper Studio_11]$ ./Studio11
+0
+[saitn@hopper Studio_11]$ ./Studio11
+0
+[saitn@hopper Studio_11]$ ./Studio11
+0
+[saitn@hopper Studio_11]$ ./Studio11
+0
+
+6. 
+[saitn@hopper Studio_11]$ time ./Studio10
+-13699087
+
+real    0m0.263s
+user    0m0.485s
+sys     0m0.005s
+[saitn@hopper Studio_11]$ time ./Studio10
+-7442923
+
+real    0m0.261s
+user    0m0.496s
+sys     0m0.002s
+[saitn@hopper Studio_11]$ time ./Studio10
+3413323
+
+real    0m0.163s
+user    0m0.317s
+sys     0m0.003s
+
+The average real time is 0.229s
+
+7.
+[saitn@hopper Studio_11]$ time ./Studio11
+0
+
+real    0m2.361s
+user    0m2.970s
+sys     0m1.504s
+[saitn@hopper Studio_11]$ time ./Studio11
+0
+
+real    0m2.150s
+user    0m2.713s
+sys     0m1.140s
+[saitn@hopper Studio_11]$ time ./Studio11
+0
+
+real    0m2.292s
+user    0m2.931s
+sys     0m1.301s
+
+The average real time is 2.268 s, so 2.039 s longer than the original
+8.
+[saitn@hopper Studio_11]$ time ./Studio11
+0
+
+real    0m0.032s
+user    0m0.023s
+sys     0m0.006s
+[saitn@hopper Studio_11]$ time ./Studio11
+0
+
+real    0m0.027s
+user    0m0.023s
+sys     0m0.003s
+[saitn@hopper Studio_11]$ time ./Studio11
+0
+
+real    0m0.027s
+user    0m0.022s
+sys     0m0.004s
+
+The average real time is 0.029 s, or .2 s shorter than the original racy program.
+
+9. Since the threads aren't alternating access, each executes as they would in sequence
+lowering any time it would take to negotiate memory. 
+
+10. A per-iteration locking strategy might be better if other threads were free to execute in between
+iterations. A once-per-thread strategy is better if speed is prioritized. 
+
