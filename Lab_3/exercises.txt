@@ -1,0 +1,77 @@
+1. Nabeel Sait
+
+2. pass
+
+3. ferry
+
+4. 1m46.625s
+
+5. 
+2 threads: 0m52.482s
+4 threads: 0m30.650s
+8 threads: 0m18.323s
+13 threads: 0m9.781s
+26 threads: 0m6.293s
+
+6. The number of hashes for a 5 character password would be 26^5. 
+1 thread: 111581 hashes/s
+2 threads: 226389 hashes/s
+4 threads: 387646 hashes/s
+8 threads: 648440 hashes/s
+13 threads: 1214740 hashes/s
+26 threads: 1888030 hashes/s
+
+7. The program runs roughly twice as fast when you double the threads, but not 8 times as fast when
+you have 8 threads. We wrote the program so that it splits the password list evenly, but since the
+parts of the program that aren't split still need to run, the reduction becomes less
+
+8. 1888030 hashes/s
+
+9. 
+1: 26 hashes
+2: 26^2 hashes
+3: 26^3 hashes
+4: 26^4 hashes
+5. 26^5 hashes
+6. 26^6 hashes
+7. 26^7 hashes
+8. 26^8 hashes
+
+10. 
+1: 26/1888030 = 0.00001377s
+2: 26^2/1888030 = 0.000358s
+3: 26^3/1888030 = 0.00930s 
+4: 26^4/1888030 = 0.242s
+5: 26^5/1888030 = 6.293s
+6: 26^6/1888030 = 163.61s
+7: 26^7/1888030 = 4254.069s
+8: 26^8/1888030 = 110605.79s
+
+11. 
+Upper and Lowercase: 52^6/1888030 = 10471.55s
+Digits: 62^6/1888030 = 30084.39s
+Symbols: 92^6/1888030 = 342680.03s 
+
+
+12. Technically, our submission does not search each keySize sized password before searching smaller ones,
+but rather mixes in the smaller ones within the search. 
+
+13. All ECs were attempted
+
+EC1: 
+abA.g8pU2Iffo: salts
+cdfnIXMyMCpPg: salts
+efgC/gw8PDKhs: salts
+ghLneTdBMxJP.: salts
+ijSsXTgIC7QRU: salts
+klr7dT7cAODsk: donot
+mn4iWfK0m76t6: skipp
+opjPsgpXaahxM: anyyy
+qr6ncfvfqecME: salts
+
+EC2: As demonstrated by EC1, the salts change the output of crypt(). This means that using salts
+means that an attacker must recompute every possible password, instead of having a pre-made list 
+that can be rapidly checked. Since, without salts, such a list would only need to be made once and
+used many times, the work needed to crack a password would be drastically reduced.
+
+EC3: Yeah, I did it the hard way. Seems to work though. 
