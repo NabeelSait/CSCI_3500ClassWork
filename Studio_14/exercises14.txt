@@ -1,0 +1,49 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2. 
+Index: 8 Thread #: 6
+Index: 4 Thread #: 2
+Index: 3 Thread #: 1
+Index: 2 Thread #: 0
+Index: 7 Thread #: 5
+Index: 9 Thread #: 7
+Index: 5 Thread #: 3
+Index: 6 Thread #: 4
+
+3.
+Max threads: 40
+
+4.
+Index: 2 Thread #: 0
+Index: 3 Thread #: 0
+Index: 9 Thread #: 4
+Index: 6 Thread #: 2
+Index: 7 Thread #: 2
+Index: 8 Thread #: 3
+Index: 4 Thread #: 1
+Index: 5 Thread #: 1
+
+5. Each thread handles 5 iterations, so OpenMP seems to schedule fairly
+
+6. When doing complicated mathematical operations, larger numbers will likely take more time, meaning
+a thread dealing with those should be assigned fewer iterations
+
+7. We can assume that OpenMP will split numerically, so the program should take about 5 seconds
+This was confirmed.
+
+real    0m5.005s
+user    0m0.017s
+sys     0m0.002s
+
+8. The program takes about 1 second
+real    0m1.005s
+user    0m0.000s
+sys     0m0.005s
+
+9. The time-intensive iterations are assigned one thread or so each, and the vast majority of the iterations
+(which are much quicker) are handled by a single thread
+
+10. Dynamic scheduling for OpenMP seems to schedule based on time. By changing the chunk size by 1, 
+the overall runtime of the program, and the amount of time-intensive iterations assigned to a thread,
+both went up by 1. So, chunk size seems to be the amount of time OpenMP dynamicallyallocates to a single thread
+
