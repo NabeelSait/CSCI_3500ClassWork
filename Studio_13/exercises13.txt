@@ -1,0 +1,72 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2. 
+[saitn@hopper Studio_13]$ ./findPrime 7
+Number is prime
+[saitn@hopper Studio_13]$ ./findPrime 23
+Number is prime
+[saitn@hopper Studio_13]$ ./findPrime 2
+Number is not prime
+[saitn@hopper Studio_13]$ ./findPrime 101
+Number is prime
+[saitn@hopper Studio_13]$ ./findPrime 982451653
+Number is prime
+
+3.
+real    0m0.005s
+user    0m0.000s
+sys     0m0.003s
+
+4.
+prime number :2
+prime number :3
+prime number :5
+prime number :7
+prime number :11
+prime number :13
+prime number :17
+prime number :19
+prime number :23
+prime number :29
+prime number :31
+prime number :37
+prime number :41
+prime number :43
+prime number :47
+prime number :53
+prime number :59
+prime number :61
+prime number :67
+prime number :71
+prime number :73
+prime number :79
+prime number :83
+prime number :89
+prime number :97
+
+5. It doesn’t matter if a number is prime or not that doesn’t affect the next number
+6. If a number is divisible by five, there is no need to continue checking if it is prime. So,
+it would reduce the work required if the numbers were checked sequentially
+7. Yes
+8.   
+1 Million
+Parallel:
+real    0m0.013s
+user    0m0.014s
+sys    0m0.006s
+Sequential
+real    0m0.262s
+user    0m0.257s
+sys    0m0.001s
+20 Million
+Parallel:
+real    0m6.259s
+user    0m18.586s
+sys    0m0.014s
+Sequential:
+real    0m16.970s
+user    0m16.941s
+sys    0m0.002s
+
+
+9. We would create a number of threads with the same quantity as the testings. We would use a structure with an integer that would send it to the void function that would check if said number is parallel or not.
