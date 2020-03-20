@@ -1,0 +1,31 @@
+1. Cemil Can Ali Marandi & Nabeel Sait
+
+2. 1,073,741,824/4,096 = 262144
+
+3. 2^32/4096 = 1048576
+
+4. When a page fault occurs, the O.S. needs to choose a page to evict from memory to make room for the new page.
+
+5. 1048576
+
+6. 32768
+
+7. 5 bits
+
+8. The page number is 5 bits and offset is 27.
+
+9. 45 bits
+
+10. 18 frame bits
+
+11. The first 18 bits is the frame bits, the last 27 is the offset.
+
+12. Page 0
+
+13. Pages 3 & 5
+
+14. 8 bits
+
+15. 101110001111000
+
+16. 01011110000111
