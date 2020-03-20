@@ -1,0 +1,27 @@
+1. Cemil Can Ali Marandi & Nabeel Sait
+
+2.
+Page Size: 2^10 * 4 = 2^10 * 2^2 = 2^12
+Memory: 2^30
+# of frames = memory/size = 2^30/2^12 = 2^18 frames, or 262144 frames
+
+3.
+Can address 2^48 bytes, or approx. 2.81e14 bytes (a lot)
+# of pages = 2^48/2^12 = 2^36 pages, or about 64 billion pages
+
+4. Decimal address 10500 is equivalent to hex address 0x2904. 
+We have page sizes 4096 (0x1000) bytes, this address is in page three. 
+Also, the offset would be 0x2904 - 0x2000, which is 0x904 (2308) bytes.
+
+5. The 67th page frame would have physical address starting at 0x1000 * (67-1) = 0x42000. 
+With the offset from the previous exercise, this absolute physical address would be 0x42904.
+
+6. For a 15GB movie, we would have 15*(2^30) bytes, and so it would need 15*(2^30)/(2^12) = 15*(2^18) = 3932160 page frames which is approximately 4 million page frames. 
+Let's say the probability of a page fault for a system is denoted as "p", then we would expect about p*4 million page faults.
+
+7. Our new page size is 32*(2^10) = 2^15 bytes. So, we would need 15*(2^30)/(2^15) = 15*(2^15) = 491520 page frames which is approximately 500 thousand page frames. 
+Let's say the probability of a page fault for a system is denoted as "p", then we would expect about p*500 thousand page faults.
+
+8. With small page sizes, we would reduce the chance of having a page not being fully utilized. Large page sizes, however, reduce the chance of page faults.
+
+9. Since the system is using page frames, with a given page size, a full page's worth of memory will need to be taken up in memory, despite only wanting to read one single byte of data.
