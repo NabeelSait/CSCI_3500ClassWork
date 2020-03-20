@@ -1,0 +1,40 @@
+1. Cemil Can Ali Marandi & Nabeel Sait
+
+2. This program would not work at 0x1000, because the program is accessing a physical memory which is would be above it and 
+this could result in a segmentation fault, or otherwise unexpected behavior that would break how the program is supposed to work.
+
+3.
+movl    ($0x1100),   %eax
+movl    ($0x1104),   %ebx
+movl    %eax,       ($0x1104)
+movl    %ebx,       ($0x1100)
+
+4.
+Partition | first addr | last addr
+1         | 0x0        | 0xFFF
+2         | 0x1000     | 0x1FFF
+3         | 0x2000     | 0x2FFF
+4         | 0x3000     | 0x3FFF
+
+5. This would cause the program to jump to address 0x1234, since the original value is being overwritten by the other program.
+
+6. The code would not need to be rewritten, so long as the base and limit registers were changed based on the program location
+
+7. For the first program, nothing would change, as the base register is set at 0x0. 
+However, for the second program, the absolute addresses would be incremented by its base, 
+and this would be done as:
+$0x1234 changing to $0x2234, and 0x26 changing to 0x1026. The programs would execute as intended
+
+8. 
+Stack
+0x0000 - unused
+0x1000 - in use
+0x2000 - in use
+0x3000 - unused
+
+0x2000 bytes of memory are free
+
+9. The blocks of memory that are free are disjoint, so program C is not able to access them jointly in order to run
+
+10. This could be done by shifting the base register for B to 0x0000, or down to 0x2000. Then, there would be 0x2000 joint bytes of memory
+for program C to use
