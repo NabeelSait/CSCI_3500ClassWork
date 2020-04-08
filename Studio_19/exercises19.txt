@@ -1,0 +1,52 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2. -rw-r--r-- are the permissions on the file. So the user has read/write permission
+
+3. The filesize is 0 bytes
+
+4. 0000000: 546f 2062 6520 6f72 206e 6f74 2074 6f20  To be or not to
+0000010: 6265 2c20 7468 6174 2069 7320 7468 6520  be, that is the
+0000020: 7175 6573 7469 6f6e 2e20 5768 6574 6865  question. Whethe
+0000030: 7220 7469 7320 6e6f 626c 6572 2069 6e20  r tis nobler in
+0000040: 7468 6520 6d69 6e64 2074 6f20 7375 6666  the mind to suff
+0000050: 6572 2074 6865 2073 6c69 6e67 7320 616e  er the slings an
+0000060: 6420 6172 726f 7773 0a6f 6620 6f75 7472  d arrows.of outr
+0000070: 6167 656f 7573 2066 6f72 7475 6e65 2c20  ageous fortune,
+0000080: 6f72 2074 6f20 7461 6b65 2061 726d 7320  or to take arms
+0000090: 6167 6169 6e73 7420 6120 7365 6120 6f66  against a sea of
+00000a0: 2074 726f 7562 6c65 732c 2061 6e64 2062   troubles, and b
+00000b0: 7920 6f70 706f 7369 6e67 2065 6e64 2074  y opposing end t
+00000c0: 6865 6d2e 0a                             hem..
+
+5. The file ending in a terminal 0a, which typically cuts off a string, indicates that this is plaintext
+
+6. The newline character '\n' is not outputted onto the screen
+
+7..ELF
+
+8. There are sections like this:
+0000350: 6561 642e 736f 2e30 0070 7468 7265 6164  ead.so.0.pthread
+0000360: 5f63 7265 6174 6500 7074 6872 6561 645f  _create.pthread_
+0000370: 6a6f 696e 006c 6962 632e 736f 2e36 0070  join.libc.so.6.p
+0000380: 7269 6e74 6600 5f5f 6c69 6263 5f73 7461  rintf.__libc_sta
+0000390: 7274 5f6d 6169 6e00 5f5f 676d 6f6e 5f73  rt_main.__gmon_s
+00003a0: 7461 7274 5f5f 0047 4c49 4243 5f32 2e32  tart__.GLIBC_2.2
+00003b0: 2e35 0000 0000 0200 0300 0300 0000 0200  .5
+
+Which seem to be referring to system calls used in the code. 
+
+9. 
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+Class referes to the fact that this is an executable program designed for x64 hardware
+The Data refers to how the data used is stored in the stack
+
+10. 
+ [13] .text             PROGBITS         0000000000400490  00000490
+       00000000000001c2  0000000000000000  AX       0     0     16
+
+The offset is 00000490
+
+11. 
+    61: 000000000040057d    95 FUNC    GLOBAL DEFAULT   13 main
+So byte 000000000040057d
