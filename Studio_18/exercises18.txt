@@ -1,0 +1,65 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2. The minimum number of page faults is 8
+
+3. Using the optimal algorithm, 8 page faults occur. The page frames are:
+AFB (3 faults)
+ACB (4 faults)
+ACE (5 faults)
+ACD (6 faults)
+ABD (7 faults)
+ABF (8 faults)
+
+4. Using a FIFO algorithm, there are 11 faults. The page frames are:
+AFB (3 faults)
+CFB (4 faults)
+CEB (5 faults)
+CEA (6 faults)
+DEA (7 faults)
+DCA (8 faults)
+DCB (9 faults)
+ACB (10 faults)
+AFB (11 faults)
+
+5. Usinga LRU algorith, there are . The page frames are:
+AFB (3 faults)
+CFB (4 faults)
+CEB (5 faults)
+CEA (6 faults)
+DEA (7 faults)
+DEC (8 faults)
+DBC (9 faults)
+ABC (10 faults)
+ABF (11 faults)
+
+6. Rearranging the page access order would reduce the number of page faults. Pre-loading pages would also help reduce the number
+of initial page faults
+
+7. The same page is more frequently accessed twice in a row, instead of scattered, meaning 
+there is less of a chance of a page fault from it being accessed later. 
+
+8. The page frames are:
+DCB (3 faults)
+ACB (4 faults)
+ADB (5 faults)
+ADC (6 faults) 
+EDC (7 faults)
+EBC (8 faults)
+EBA (9 faults)
+So a total of 9 faults
+
+9. 
+DCBA (4 faults)
+ECBA (5 faults)
+EDBA (6 faults)
+EDCA (7 faults)
+EDCB (8 faults)
+ADCB (9 faults)
+AECB (10 faults)
+So a total of 10 faults
+
+10. The result was definetely counter-intuitive. With more page frames, the page frames shifted less
+which meant they also adapted less, and had to be entirely replaced eventually
+
+11. Buy machines that improve processing power without disturbing the algorithms in place,
+or adapt the algorithms used to better suit the new machines. 
