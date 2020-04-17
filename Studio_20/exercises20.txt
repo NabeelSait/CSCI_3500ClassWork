@@ -1,0 +1,59 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2. 
+F - 3 blocks
+Free - 2 blocks
+E - 4 blocks
+Free - 2 blocks
+D - 5 blocks
+Free - 4 blocks
+
+3. There are 2 free chunks of size 2
+
+4. They take up 20% of the disk space
+
+5.
+E - 2 blocks
+B- 2 blocks
+D - 2 blocks
+E - 2 blocks
+Free - 1 block
+D - 3 blocks
+
+6. There is one such chunk
+
+7. Not really, since the chunk can always be filled by an expansion, since memory
+is not contiguous
+
+8. 4 blocks must be read - the three preceeding blocks and the block containing the byte
+
+9. 
+FAT
+0 - 1
+1 - 6
+2 - 3
+3 - -1
+4 - 5
+5 - 9
+6 - 7
+7 - -1
+8 -
+9 - 10
+10 - 11
+11 - -1
+12 through 19 are all empty
+
+10. 
+1 KB: 2^30 * 10/2^10 = 2^23.32 entries
+4 KB: 2^30*10/2^12 = 2^21.32 entries
+8 KB: 2^30*10/2^13 = 2^20.32 entries
+
+11. 
+1 KB: 2^24.9 bytes
+4 KB: 2^22.9 bytes
+8 KB: 2^21.9 bytes
+
+12.
+1 KB: 3 seeks, 3 reads, so 39 microseconds
+2 KB: 2 seeks, 2 reads, so 26 microseconds
+4 KB: 1 seek, 1 read, so 13 microseconds
