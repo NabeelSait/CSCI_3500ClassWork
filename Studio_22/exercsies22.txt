@@ -1,0 +1,24 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2. 9 bits
+
+3.
+00001111
+11101100
+11111111
+00000000
+1
+
+4. It should catch every instance of a 1 bit flip
+
+5. If two 1's are flipped to 0, or two 0s are flipped to 1's, the parity bit will not help
+catch this error
+
+6. The parity bit catches an error when it changes the number of 1s from even to odd or vice versa
+(so addition by an odd number). It fails to catch changes otherwise. 
+
+7. 38 bytes
+
+8. 138 bytes, with a 38% overhead
+
+9. 1538 bytes, with a 2.53% overhead
