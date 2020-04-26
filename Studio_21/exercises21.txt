@@ -1,0 +1,41 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2. 
+br0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 165.134.107.80  netmask 255.255.255.224  broadcast 165.134.107.95
+        inet6 fe80::c083:ecff:fe0a:1538  prefixlen 64  scopeid 0x20<link>
+        ether 0c:c4:7a:54:51:da  txqueuelen 1000  (Ethernet)
+        RX packets 19903635408  bytes 69973991302992 (63.6 TiB)
+        RX errors 0  dropped 54195  overruns 0  frame 0
+        TX packets 15174395643  bytes 62499406152139 (56.8 TiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+3. Current IP addresses are:
+        inet 165.134.107.80  netmask 255.255.255.224  broadcast 165.134.107.95
+        inet6 fe80::c083:ecff:fe0a:1538
+4. The hardware address is: 0c:c4:7a:54:51:da
+
+5. hopper.slu.edu
+
+6. The command returns the IP address or addresses of the website
+
+7. It is possible that slu.edu uses multiple servers, thus requiring multiple
+IP addresses
+
+8. 
+Layer 1: The IrDA is a set of protocols for infrared communication, which would naturally
+be in the physical layer
+Layer 2: The Adress Resolution protocol is a communication protocol used to determine the link layer address 
+associated with a given internet layer address. Since this is a form of data linking, it makes sense that it 
+is in the data link layer
+Layer 3: Network Address Translation is a method for remapping one IP address space into another. Since this is
+a network operation (working with IP address) it makes sense to be in the Network Layer
+Layer 4: AppleTalk Echo Protocol is a transport layer protocol designed to test the reachability of network nodes.
+Since this deals with communication between networks, it makes sense that it is in the transport layer
+Layer 5: Passowrd Authentication Protocol is a method for authenticating users based on passwords. Since this 
+is required for many sessions to take place, and can't be done before communication is established
+, it makes sense to be in the Session Layer. 
+Layer 6: Transfer Layer Security is a cryptographic protocol designed to provide secruity over a network. Since this deals
+with secure communication after authentication, this makes sense to be in this layer
+Layer 7: Hypettext Transfer Protocol (or HTTP) is an application protocol for distributed, colloborative, hypermedia information systems.
+In short, it makes hyperlinks and websites work. Since this takes place in the application part of a website (something with
+direct user interaction), it makes sense to be in the application layer.
