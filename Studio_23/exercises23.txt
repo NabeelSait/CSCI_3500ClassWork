@@ -1,0 +1,24 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2. The first 24 bits are constant while the last 8 can vary
+
+3. 152.221.54.0/24
+
+4. Network address: 10011000 01001110 0110
+Host Identifier: 0101 00100011
+
+5. 165.134.0.0/16
+
+6. There are 16 bits in SLU's host identifier, which means 2^16 IP addresses have been asigned to SLU
+
+7. The first 20 bits of the subnet are 00100110 10111111 1101. This matches with B
+
+8. A, B and D all match this IP address
+
+9. 20.40.80.0/24 is the longer match
+
+10. 
+A) Sent on Ethernet0
+B) Sent on Ethernet1
+C) Sent on Ethernet2
+D) Sent on Ethernet5
