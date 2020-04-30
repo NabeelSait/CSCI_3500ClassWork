@@ -1,0 +1,32 @@
+1. Nabeel Sait and Cemil Can Ali Marandi
+
+2. 
+
+3. 
+Accepted Client Connection
+Got 'This is from the client.' from client
+
+4.
+Accepted Client Connection
+Got 'Hello' from client
+Accepted Client Connection
+Got 'World' from client
+Accepted Client Connection
+Got '!' from client
+Accepted Client Connection
+
+5. 
+Client side of previous:
+
+itn@hopper Studio_24]$ ./client
+Connected to server successfully
+Enter a message: Hello
+[saitn@hopper Studio_24]$ ./client
+Connected to server successfully
+Enter a message: World
+[saitn@hopper Studio_24]$ ./client
+Connected to server successfully
+Enter a message: !
+[saitn@hopper Studio_24]$ ./client
+Connected to server successfully
+Enter a message: quit
