@@ -19,7 +19,7 @@ int buffer_size = 1024;
 
 int main(int argc, char *argv[]) {
    
-   int buffer[buffer_size];
+   char buffer[buffer_size];
    int ret, sfd, cfd;
    struct sockaddr_un my_addr;
    socklen_t addr_size;
